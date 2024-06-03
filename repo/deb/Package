@@ -5,10 +5,10 @@ Architecture: all
 Maintainer: Pabitra Banerjee <rockstarpabitra2204@gmail.com>
 Depends: python3, python3-pip
 Filename: ./portip.deb
-Size: 752
-MD5sum: 3d468fcbc110f27fc50fe122eea70be9
-SHA1: b063dbdbe940cc6b2f1d7a9810ffbd08e5436164
-SHA256: a1692ca2a8bcbf773c75bc534374e0fc610d8052dd264c1165ebbfc5450d58fb
+Size: 754
+MD5sum: b04f3fcf6c7561f026dc50efd2933b96
+SHA1: 74fe09af26adc386773cda1ff9a284ecfd067f85
+SHA256: 79360027c5ae5d95a5ae432e81363c1491d0feec85bccf57bae19be501450509
 Section: utils
 Priority: optional
 Homepage: https://github.com/PB2204/portip
