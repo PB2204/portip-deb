@@ -34,7 +34,18 @@ jobs:
         mkdir -p repo/deb
         mv portip.deb repo/deb/
         cd repo/deb
-        dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
+        dpkg-scanpackages . /dev/null > Packages
+        gzip -9c Packages > Packages.gz
+
+    - name: Commit and push
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add repo/deb/Packages repo/deb/Packages.gz
+        git commit -m 'Update Packages files'
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload DEB package and metadata
       uses: actions/upload-artifact@v2
