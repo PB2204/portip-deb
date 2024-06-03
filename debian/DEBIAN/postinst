@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Post-installation script
+
+# Add any post-installation steps here
+echo "Post-installation steps completed."
