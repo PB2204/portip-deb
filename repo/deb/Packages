@@ -1,12 +1,18 @@
+Package: portip
 Source: portip
+Version: 1.0.0
+Architecture: all
+Maintainer: Pabitra Banerjee <rockstarpabitra2204@gmail.com>
+Depends: python3, python3-pip
+Filename: ./portip.deb
+Size: 752
+MD5sum: 3d468fcbc110f27fc50fe122eea70be9
+SHA1: b063dbdbe940cc6b2f1d7a9810ffbd08e5436164
+SHA256: a1692ca2a8bcbf773c75bc534374e0fc610d8052dd264c1165ebbfc5450d58fb
 Section: utils
 Priority: optional
-Maintainer: Pabitra Banerjee <rockstarpabitra2204@gmail.com>
+Homepage: https://github.com/PB2204/portip
+Description: Simple IP and Port Scanner tool. A tool for pinging websites and scanning for open ports on a given URL.
 Build-Depends: debhelper (>= 10)
 Standards-Version: 4.5.0
-Homepage: https://github.com/PB2204/portip-deb
-Package: portip
-Architecture: all
-Depends: python3, python3-pip
-Description: Simple IP and Port Scanner tool. A tool for pinging websites and scanning for open ports on a given URL.
-Version: 1.0.0
+
