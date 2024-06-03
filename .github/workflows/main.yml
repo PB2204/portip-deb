@@ -1,0 +1,43 @@
+name: Build and Publish DEB Package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y dpkg-dev debhelper
+
+    - name: Fix permissions
+      run: chmod 755 debian/DEBIAN/postinst
+
+    - name: Build DEB package
+      run: dpkg-deb --build debian portip.deb
+
+    - name: Create repository structure
+      run: |
+        mkdir -p repo/deb
+        mv portip.deb repo/deb/
+        cd repo/deb
+        dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
+
+    - name: Upload DEB package and metadata
+      uses: actions/upload-artifact@v2
+      with:
+        name: portip-repo
+        path: repo/deb
