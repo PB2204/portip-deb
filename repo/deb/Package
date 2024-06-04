@@ -5,7 +5,7 @@ Architecture: all
 Maintainer: Pabitra Banerjee <rockstarpabitra2204@gmail.com>
 Depends: python3, python3-pip
 Filename: ./portip.deb
-Size: 752
+Size: 3604
 MD5sum: 3bcdbb296ec082547e39c892a874a402
 SHA1: 799137c8d8999e9edc0d8513f136d082daaf5e13
 SHA256: 85e4620f26cd6ee7752be3b59c67879b07d469728732f5acafb227920ad5c3c7
